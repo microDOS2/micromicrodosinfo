@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Microdosing Metocin (4‑HO‑MET)</title>
+<style>
+  /* ===== microDOS(2) dark UI — self‑contained, no images/CDNs ===== */
+  :root{
+    --slate-900:#0f172a; --slate-850:#141c31; --slate-800:#1e293b; --slate-750:#243247;
+    --slate-700:#334155; --slate-600:#475569; --slate-500:#64748b; --slate-400:#94a3b8; --slate-300:#cbd5e1; --white:#ffffff;
+    --sky-300:#7dd3fc; --sky-400:#38bdf8; --violet-500:#8b5cf6; --pink-500:#ec4899; --cyan-500:#06b6d4; --green-500:#22c55e;
+  }
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--slate-900);color:var(--slate-300)}
+  .container{max-width:800px;margin:auto;padding:0 24px}
+  .header{position:sticky;top:0;z-index:30;background:rgba(15,23,42,.72);backdrop-filter:blur(8px);border-bottom:1px solid #0b1220}
+  .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  h1{color:#fff;font-weight:800;margin:0;font-size:24px}
+  .grad{background:linear-gradient(90deg,var(--sky-400),var(--violet-500));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none}
+  .section{padding:68px 0}
+  .title{color:#fff;font-weight:900;margin:0 0 8px;font-size:40px;text-align:center;letter-spacing:-.02em}
+  .subtitle{max-width:860px;margin:0 auto;color:var(--slate-300);text-align:center}
+  .card{background:var(--slate-800);border:1px solid #152238;border-radius:16px;padding:24px}
+  .grid{display:grid;gap:24px}
+  @media(min-width:920px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+  .kpi{background:rgba(30,41,59,.6);border-radius:12px;padding:16px}
+  .kpi .label{color:var(--slate-400);font-size:14px}
+  .kpi .value{color:#fff;font-weight:800}
+  h2{color:#fff;margin:0 0 10px;font-size:28px;text-align:center;}
+  h3{color:#fff;margin:0 0 10px;font-size:22px}
+  ul{padding-left:18px;margin:0}
+  li{margin:6px 0}
+  .muted{color:var(--slate-500);font-size:12px}
+  .footer{border-top:1px solid #1b2641;color:var(--slate-500);text-align:center;padding:32px 0;margin-top:48px}
+  
+  /* ===== Infographic Styles Start ===== */
+  .guide-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 24px;
+  }
+
+  .dose-card {
+      background: rgba(30, 41, 59, .6);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 1px solid var(--slate-750);
+  }
+
+  .tablet-visual {
+      flex-shrink: 0;
+  }
+
+  .tablet {
+      width: 80px;
+      height: 40px;
+      background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tablet::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.5);
+  }
+
+  .half .tablet {
+        width: 40px;
+        border-radius: 20px 0 0 20px;
+  }
+
+  .half .right-half {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
+      border-radius: 0 20px 20px 0;
+      opacity: 0.2;
+      position: relative;
+  }
+  
+  .half .right-half::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.5);
+      left: -1px; /* Position it on the edge */
+  }
+  
+  .quarter-container {
+      width: 80px;
+      height: 40px;
+      position: relative;
+  }
+
+  .quarter .tablet-part {
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
+  }
+
+  .quarter .top-left {
+      top: 0;
+      left: 0;
+      border-radius: 20px 0 0 0;
+  }
+  
+  .quarter .bottom-left {
+      bottom: 0;
+      left: 0;
+      border-radius: 0 0 0 20px;
+      opacity: 0.2;
+  }
+
+  .quarter .right-half {
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 20px 20px 0;
+      opacity: 0.2;
+      background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
+      position: relative;
+  }
+  .quarter .right-half::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.5);
+      left: -1px;
+  }
+
+  .dose-info {
+      text-align: left;
+      flex-grow: 1;
+  }
+
+  .dose-title {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0;
+  }
+  
+  .dose-equivalent {
+      color: var(--sky-400);
+      font-weight: 700;
+      font-size: 16px;
+      margin: 4px 0;
+  }
+
+  .dose-description {
+      color: var(--slate-400);
+      font-size: 14px;
+      margin: 0;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 600px) {
+      .dose-card {
+          flex-direction: column;
+          text-align: center;
+      }
+      .dose-info {
+          text-align: center;
+      }
+  }
+  /* ===== Infographic Styles End ===== */
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="container row">
+      <h1>microDOS<span class="grad">(2)</span></h1>
+      <a href="#safety" class="btn">Safety Notes</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Microdosing Metocin <span class="grad">(4‑HO‑MET)</span></h2>
+        <p class="subtitle">A guide to sub-perceptual and gentle doses for enhanced clarity, creativity, and focus, without the full psychedelic experience.</p>
+      </div>
+    </section>
+
+    <!-- Microdosing Guide -->
+    <section class="section" id="microdosing" style="padding-top:32px">
+      <div class="container">
+        <div class="card">
+          <h3 style="text-align:center;">Visual Dosing Guide</h3>
+          <p style="text-align:center; margin-bottom: 24px;">Each tablet is scored for easy and precise dosing. The guide below shows the equivalence for each portion.</p>
+
+          <!-- Infographic replaces the old <img> tag -->
+          <div class="guide-grid">
+
+            <!-- Full Dose -->
+            <div class="dose-card">
+                <div class="tablet-visual full">
+                    <div class="tablet"></div>
+                </div>
+                <div class="dose-info">
+                    <h3 class="dose-title">1 Tablet</h3>
+                    <p class="dose-equivalent">~500mg Shrooms</p>
+                    <p class="dose-description">A creative or recreational dose.</p>
+                </div>
+            </div>
+
+            <!-- Half Dose -->
+            <div class="dose-card">
+                <div class="tablet-visual half" style="display: flex; align-items: center;">
+                    <div class="tablet"></div>
+                    <div class="right-half"></div>
+                </div>
+                <div class="dose-info">
+                    <h3 class="dose-title">1/2 Tablet</h3>
+                    <p class="dose-equivalent">~250mg Microdose</p>
+                    <p class="dose-description">Standard microdose for creative lift.</p>
+                </div>
+            </div>
+
+            <!-- Quarter Dose -->
+            <div class="dose-card">
+                <div class="tablet-visual quarter">
+                     <div class="quarter-container">
+                        <div class="tablet-part top-left"></div>
+                        <div class="tablet-part bottom-left"></div>
+                        <div class="right-half"></div>
+                    </div>
+                </div>
+                <div class="dose-info">
+                    <h3 class="dose-title">1/4 Tablet</h3>
+                    <p class="dose-equivalent">~125mg Light Microdose</p>
+                    <p class="dose-description">Sub-perceptual for focus and energy.</p>
+                </div>
+            </div>
+
+          </div>
+          <!-- End of Infographic -->
+
+          <div class="grid grid-2" style="margin-top: 24px;">
+            <div class="kpi">
+              <div class="label">Standard Microdose</div>
+              <div class="value">1/2 Tablet</div>
+              <p style="color: var(--slate-300); font-size: 14px; margin-top: 8px;">Provides a noticeable creative and mood lift. Equivalent to ~250mg of dried mushrooms.</p>
+            </div>
+            <div class="kpi">
+              <div class="label">Light Microdose</div>
+              <div class="value">1/4 Tablet</div>
+              <p style="color: var(--slate-300); font-size: 14px; margin-top: 8px;">Offers a subtle, sub-perceptual boost in focus and energy. Equivalent to ~125mg of dried mushrooms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Potential Benefits -->
+    <section class="section" id="benefits" style="padding-top:32px">
+      <div class="container card">
+        <h3>Potential Benefits of Microdosing</h3>
+        <p>While individual experiences vary, users often microdose to seek:</p>
+        <ul>
+          <li>Enhanced focus and concentration</li>
+          <li>Increased creativity and divergent thinking</li>
+          <li>Improved mood and a more positive outlook</li>
+          <li>Greater presence and sensory awareness</li>
+          <li>Reduced anxiety in social or professional settings</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section" id="safety" style="padding-top:32px">
+      <div class="container card">
+        <h3>Safety & Use Notes</h3>
+        <ul>
+          <li><strong>Start Low:</strong> If you are new to Metocin, begin with a light microdose (1/4 tab) to assess your sensitivity.</li>
+          <li><strong>Legal:</strong> 4‑HO‑MET is not federally scheduled in the U.S.; always verify your local laws.</li>
+          <li><strong>Set & setting:</strong> While microdosing is sub-perceptual, be mindful of your environment. Avoid driving until you understand how it affects you.</li>
+          <li><strong>Plan your day:</strong> Effects are subtle but can last ~4 hours.</li>
+          <li><strong>Hydration:</strong> Drink water and avoid mixing with alcohol.</li>
+          <li><strong>Adults only:</strong> Intended for 21+. Consult a healthcare professional if you have medical conditions or take other medications.</li>
+        </ul>
+        <p class="muted">This content is for informational purposes only and is not medical advice. These statements have not been evaluated by the FDA.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 microDOS(2) — Precision Psychedelics, Simplified.</footer>
+</body>
+</html>
