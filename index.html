@@ -18,7 +18,7 @@
   .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
   h1{color:#fff;font-weight:800;margin:0;font-size:24px}
   .grad{background:linear-gradient(90deg,var(--sky-400),var(--violet-500));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none; margin: 5px;}
   .section{padding:68px 0}
   .title{color:#fff;font-weight:900;margin:0 0 8px;font-size:40px;text-align:center;letter-spacing:-.02em}
   .subtitle{max-width:860px;margin:0 auto;color:var(--slate-300);text-align:center}
@@ -168,6 +168,10 @@
       font-size: 14px;
       margin: 0;
   }
+  .button-container {
+    text-align: center;
+    margin-top: 24px;
+  }
 
   /* Responsive adjustments */
   @media(max-width: 600px) {
@@ -282,11 +286,16 @@
           <li>Greater presence and sensory awareness</li>
           <li>Reduced anxiety in social or professional settings</li>
         </ul>
-        <a href="https://microdos2.github.io/Joes-Story/" class="btn" style="margin-top: 24px; text-align: center; display: block; max-width: 250px; margin-left: auto; margin-right: auto;">
-            Joe's Story
-            <br>
-            <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">The Day the Colors Came Back</span>
-        </a>
+        <div class="button-container">
+            <a href="https://microdos2.github.io/Joes-Story/" class="btn">
+                Joe's Story
+                <br>
+                <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">The Day the Colors Came Back</span>
+            </a>
+            <a href="https://docs.google.com/document/d/1bcFpkotyifNp71QUVT3-xtZdb3rcMimgsSk8NCzBu18/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">
+                Micro dosing Metocin info
+            </a>
+        </div>
       </div>
     </section>
 
