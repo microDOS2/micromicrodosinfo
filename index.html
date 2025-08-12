@@ -173,6 +173,18 @@
     margin-top: 24px;
   }
 
+  .benefits-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .benefits-header h3 {
+    margin: 0;
+  }
+
   /* Responsive adjustments */
   @media(max-width: 600px) {
       .dose-card {
@@ -190,8 +202,15 @@
 <body>
   <header class="header">
     <div class="container row">
-      <h1>microDOS<span class="grad">(2)</span></h1>
-      <a href="#safety" class="btn">Safety Notes</a>
+        <div style="flex: 1;">
+            <h1>microDOS<span class="grad">(2)</span></h1>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <a href="https://microdos2.github.io/UPDATE2/" class="btn">Home</a>
+        </div>
+        <div style="flex: 1; text-align: right;">
+            <a href="#safety" class="btn">Safety Notes</a>
+        </div>
     </div>
   </header>
 
@@ -243,10 +262,10 @@
             <div class="dose-card">
                 <div class="tablet-visual quarter">
                      <div class="quarter-container">
-                        <div class="tablet-part top-left"></div>
-                        <div class="tablet-part bottom-left"></div>
-                        <div class="right-half"></div>
-                    </div>
+                          <div class="tablet-part top-left"></div>
+                          <div class="tablet-part bottom-left"></div>
+                          <div class="right-half"></div>
+                     </div>
                 </div>
                 <div class="dose-info">
                     <h3 class="dose-title">1/4 Tablet</h3>
@@ -277,7 +296,12 @@
     <!-- Potential Benefits -->
     <section class="section" id="benefits" style="padding-top:32px">
       <div class="container card">
-        <h3>Potential Benefits of Microdosing</h3>
+        <div class="benefits-header">
+          <h3>Potential Benefits of Microdosing</h3>
+          <a href="https://docs.google.com/document/d/1bcFpkotyifNp71QUVT3-xtZdb3rcMimgsSk8NCzBu18/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">
+              Microdosing Metocin Info
+          </a>
+        </div>
         <p>While individual experiences vary, users often microdose to seek:</p>
         <ul>
           <li>Enhanced focus and concentration</li>
@@ -292,8 +316,10 @@
                 <br>
                 <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">The Day the Colors Came Back</span>
             </a>
-            <a href="https://docs.google.com/document/d/1bcFpkotyifNp71QUVT3-xtZdb3rcMimgsSk8NCzBu18/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">
-                Micro dosing Metocin info
+            <a href="https://microdos2.github.io/Elanor-s-quiet-revolution/" class="btn">
+                Elanor's Story
+                <br>
+                <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">A Quiet Revolution</span>
             </a>
         </div>
       </div>
