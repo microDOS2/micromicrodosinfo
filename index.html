@@ -18,7 +18,8 @@
   .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
   h1{color:#fff;font-weight:800;margin:0;font-size:24px}
   .grad{background:linear-gradient(90deg,var(--sky-400),var(--violet-500));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none; margin: 5px;}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none;}
+  .nav-links a + a { margin-left: 12px; }
   .section{padding:68px 0}
   .title{color:#fff;font-weight:900;margin:0 0 8px;font-size:40px;text-align:center;letter-spacing:-.02em}
   .subtitle{max-width:860px;margin:0 auto;color:var(--slate-300);text-align:center}
@@ -194,6 +195,9 @@
       .dose-info {
           text-align: center;
       }
+      .nav-links {
+        display: none; /* Hide nav links on small screens if needed */
+      }
   }
   /* ===== Infographic Styles End ===== */
 
@@ -202,15 +206,12 @@
 <body>
   <header class="header">
     <div class="container row">
-        <div style="flex: 1;">
-            <h1>microDOS<span class="grad">(2)</span></h1>
-        </div>
-        <div style="flex: 1; text-align: center;">
-            <a href="https://microdos2.github.io/UPDATE2/" class="btn">Home</a>
-        </div>
-        <div style="flex: 1; text-align: right;">
-            <a href="#safety" class="btn">Safety Notes</a>
-        </div>
+      <h1>microDOS<span class="grad">(2)</span></h1>
+      <nav class="nav-links">
+        <a href="#microdosing" class="btn">Dosage Guide</a>
+        <a href="https://microdos2.github.io/UPDATE2/" class="btn">Home</a>
+        <a href="#safety" class="btn">Safety Notes</a>
+      </nav>
     </div>
   </header>
 
