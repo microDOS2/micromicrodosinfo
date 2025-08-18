@@ -269,9 +269,26 @@ li {
   font-size: 14px;
   margin: 0;
 }
-.button-container {
-  text-align: center;
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
   margin-top: 24px;
+}
+.story-grid .btn {
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.story-subtitle {
+  font-size: 14px;
+  opacity: 0.85;
+  font-weight: 400;
+  margin-top: 4px;
 }
 .benefits-header {
   display: flex;
@@ -298,8 +315,8 @@ li {
     display: none;
     /* Hide nav links on small screens if needed */
   }
-  .button-container a {
-    margin-bottom: 12px;
+  .story-grid {
+    grid-template-columns: 1fr;
   }
 }
 /* ===== Infographic Styles End ===== */
@@ -387,6 +404,14 @@ li {
         </div>
       </div>
     </section>
+
+    <!-- Adults Who Microdose Report CTA -->
+    <section class="section" style="padding-top: 32px; padding-bottom: 0; text-align: center;">
+      <a href="https://drive.google.com/file/d/1kiWditppClxE54T2SHQFF8p3NhSQcewj/view?usp=sharing" class="btn" style="padding: 12px 24px; font-size: 18px;">
+        "Adults who micro dose" Report
+      </a>
+    </section>
+
     <!-- Potential Benefits -->
     <section class="section" id="benefits" style="padding-top:32px">
       <div class="container card">
@@ -404,29 +429,26 @@ li {
           <li>Greater presence and sensory awareness</li>
           <li>Reduced anxiety in social or professional settings</li>
         </ul>
-        <div class="button-container">
+        <div class="story-grid">
           <a href="https://microdos2.github.io/Joes-Story/" class="btn">
-            Joe's Story
-            <br>
-            <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">The Day the Colors Came Back</span>
+            <span>Joe's Story</span>
+            <span class="story-subtitle">The Day the Colors Came Back</span>
           </a>
           <a href="https://microdos2.github.io/Elanor-s-quiet-revolution/" class="btn">
-            Elanor's Story
-            <br>
-            <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">A Quiet Revolution</span>
+            <span>Elanor's Story</span>
+            <span class="story-subtitle">A Quiet Revolution</span>
           </a>
           <a href="https://microdos2.github.io/Jalen-s-Story/" class="btn">
-            Jalen's Story
-            <br>
-            <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">A Journey Back to Self</span>
+            <span>Jalen's Story</span>
+            <span class="story-subtitle">A Journey Back to Self</span>
           </a>
            <a href="https://microdos2.github.io/lenas-story/" class="btn">
-            Lena's Story
-            <br>
-            <span style="font-size: 14px; opacity: 0.85; font-weight: 400;">Finding Flow in the Everyday</span>
+            <span>Lena's Story</span>
+            <span class="story-subtitle">Finding Flow in the Everyday</span>
           </a>
           <a href="https://microdos2.github.io/Banyus-Story/" class="btn">
-            Banyu's Story
+            <span>Banyu's Story</span>
+            <span class="story-subtitle">Blueprint for Clarity</span>
           </a>
         </div>
       </div>
