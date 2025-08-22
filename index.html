@@ -3,494 +3,216 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Microdosing Metocin (4‑HO‑MET)</title>
+<title>Metocin (4‑HO‑MET) — Standalone Info (No Images)</title>
 <style>
-/* ===== microDOS(2) dark UI — self‑contained, no images/CDNs ===== */
-:root {
-  --slate-900: #0f172a;
-  --slate-850: #141c31;
-  --slate-800: #1e293b;
-  --slate-750: #243247;
-  --slate-700: #334155;
-  --slate-600: #475569;
-  --slate-500: #64748b;
-  --slate-400: #94a3b8;
-  --slate-300: #cbd5e1;
-  --white: #ffffff;
-  --sky-300: #7dd3fc;
-  --sky-400: #38bdf8;
-  --violet-500: #8b5cf6;
-  --pink-500: #ec4899;
-  --cyan-500: #06b6d4;
-  --green-500: #22c55e;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-  background: var(--slate-900);
-  color: var(--slate-300);
-}
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 0 24px;
-}
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  background: rgba(15, 23, 42, .72);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #0b1220;
-}
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-}
-h1 {
-  color: #fff;
-  font-weight: 800;
-  margin: 0;
-  font-size: 24px;
-}
-.grad {
-  background: linear-gradient(90deg, var(--sky-400), var(--violet-500));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, var(--sky-400), var(--violet-500));
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-}
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 12px;
-}
-.nav-links a {
-  flex-shrink: 0;
-}
-.section {
-  padding: 68px 0;
-}
-.title {
-  color: #fff;
-  font-weight: 900;
-  margin: 0 0 8px;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: -.02em;
-}
-.subtitle {
-  max-width: 860px;
-  margin: 0 auto;
-  color: var(--slate-300);
-  text-align: center;
-}
-.card {
-  background: var(--slate-800);
-  border: 1px solid #152238;
-  border-radius: 16px;
-  padding: 24px;
-}
-.grid {
-  display: grid;
-  gap: 24px;
-}
-@media (min-width: 920px) {
-  .grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+  /* ===== microDOS(2) dark UI — self‑contained, no images/CDNs ===== */
+  :root{
+    --slate-900:#0f172a; --slate-850:#141c31; --slate-800:#1e293b; --slate-750:#243247;
+    --slate-700:#334155; --slate-600:#475569; --slate-500:#64748b; --slate-400:#94a3b8; --slate-300:#cbd5e1; --white:#ffffff;
+    --sky-300:#7dd3fc; --sky-400:#38bdf8; --violet-500:#8b5cf6; --pink-500:#ec4899; --cyan-500:#06b6d4; --green-500:#22c55e;
   }
-}
-.kpi {
-  background: rgba(30, 41, 59, .6);
-  border-radius: 12px;
-  padding: 16px;
-}
-.kpi .label {
-  color: var(--slate-400);
-  font-size: 14px;
-}
-.kpi .value {
-  color: #fff;
-  font-weight: 800;
-}
-h2 {
-  color: #fff;
-  margin: 0 0 10px;
-  font-size: 28px;
-  text-align: center;
-}
-h3 {
-  color: #fff;
-  margin: 0 0 10px;
-  font-size: 22px;
-}
-ul {
-  padding-left: 18px;
-  margin: 0;
-}
-li {
-  margin: 6px 0;
-}
-.muted {
-  color: var(--slate-500);
-  font-size: 12px;
-}
-.footer {
-  border-top: 1px solid #1b2641;
-  color: var(--slate-500);
-  text-align: center;
-  padding: 32px 0;
-  margin-top: 48px;
-}
-
-/* ===== Infographic Styles Start ===== */
-.guide-grid {
-  display: grid;
-  gap: 24px;
-  margin-top: 24px;
-}
-.dose-card {
-  background: rgba(30, 41, 59, .6);
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  border: 1px solid var(--slate-750);
-}
-.tablet-visual {
-  flex-shrink: 0;
-  width: 80px;
-  height: 40px;
-  position: relative;
-}
-.tablet-part {
-  position: absolute;
-  background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.full .tablet-part {
-  border-radius: 20px;
-}
-.half .tablet-part {
-  width: 50%;
-  border-radius: 20px 0 0 20px;
-}
-.half .tablet-part:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1px; /* Overlap slightly for a cleaner seam */
-  height: 100%;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.half .faded-part {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
-  border-radius: 0 20px 20px 0;
-  opacity: 0.2;
-}
-.quarter .tablet-part {
-  width: 50%;
-  height: 50%;
-  border-radius: 20px 0 0 0;
-}
-.quarter .faded-half {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
-  border-radius: 0 20px 20px 0;
-  opacity: 0.2;
-}
-.quarter .faded-quarter {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  background: linear-gradient(145deg, var(--slate-400), var(--slate-300));
-  border-radius: 0 0 0 20px;
-  opacity: 0.2;
-}
-.quarter .tablet-part:after, .quarter .faded-quarter:after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.5);
-  right: -1px;
-}
-.quarter .tablet-part:before, .quarter .faded-quarter:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-  bottom: -1px;
-}
-.dose-info {
-  text-align: left;
-  flex-grow: 1;
-}
-.dose-title {
-  color: var(--white);
-  font-weight: 700;
-  font-size: 18px;
-  margin: 0;
-}
-.dose-equivalent {
-  color: var(--sky-400);
-  font-weight: 700;
-  font-size: 16px;
-  margin: 4px 0;
-}
-.dose-description {
-  color: var(--slate-400);
-  font-size: 14px;
-  margin: 0;
-}
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-.story-grid .btn {
-  padding: 8px; /* Further reduced padding */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 250px; /* Added max-width to control the box size */
-}
-.story-grid .btn span:first-child {
-  font-size: 16px; /* Reverted font size for title */
-}
-.story-grid .btn span:last-child {
-  font-size: 12px; /* Reverted font size for subtitle */
-  opacity: 0.85;
-  font-weight: 400;
-  margin-top: 4px;
-}
-.benefits-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.benefits-header h3 {
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .dose-card {
-    flex-direction: column;
-    text-align: center;
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--slate-900);color:var(--slate-300)}
+  .container{max-width:1100px;margin:auto;padding:0 24px}
+  .header{position:sticky;top:0;z-index:30;background:rgba(15,23,42,.72);backdrop-filter:blur(8px);border-bottom:1px solid #0b1220}
+  .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  h1{color:#fff;font-weight:800;margin:0;font-size:24px}
+  .grad{background:linear-gradient(90deg,var(--sky-400),var(--violet-500));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none; margin: 5px;}
+  .nav-links a + a { margin-left: 12px; } /* Style for spacing nav buttons */
+  .section{padding:68px 0}
+  .title{color:#fff;font-weight:900;margin:0 0 8px;font-size:40px;text-align:center;letter-spacing:-.02em}
+  .subtitle{max-width:860px;margin:0 auto;color:var(--slate-300);text-align:center}
+  .card{background:var(--slate-800);border:1px solid #152238;border-radius:16px;padding:24px}
+  .grid{display:grid;gap:24px}
+  @media(min-width:920px){.grid-3{grid-template-columns:2fr 1fr}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3eq{grid-template-columns:repeat(3,1fr)}}
+  .kpi{background:rgba(30,41,59,.6);border-radius:12px;padding:16px}
+  .kpi .label{color:var(--slate-400);font-size:14px}
+  .kpi .value{color:#fff;font-weight:800}
+  h2{color:#fff;margin:0 0 10px;font-size:28px}
+  h3{color:#fff;margin:0 0 10px;font-size:22px}
+  ul{padding-left:18px;margin:0}
+  li{margin:6px 0}
+  /* --- Infographic widgets (pure CSS) --- */
+  .badge{display:inline-block;padding:10px 14px;border-radius:12px;color:#fff;font-weight:800;letter-spacing:.4px;border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .b-green{background:linear-gradient(90deg,#10b981,#34d399)}
+  .b-purple{background:linear-gradient(90deg,#7c3aed,#a78bfa)}
+  .b-blue{background:linear-gradient(90deg,#0ea5e9,#60a5fa)}
+  .b-pink{background:linear-gradient(90deg,#ec4899,#f472b6)}
+  .dosebar{height:10px;border-radius:999px;background:linear-gradient(90deg,#10b981,#a78bfa,#0ea5e9,#ec4899);box-shadow:0 6px 24px rgba(0,0,0,.4);position:relative}
+  .dosebar::after{content:"";position:absolute;left:0;right:0;top:-8px;height:26px;border-radius:999px;background:linear-gradient(90deg,rgba(16,185,129,.15),rgba(167,139,250,.15),rgba(14,165,233,.15),rgba(236,72,153,.15));filter:blur(8px)}
+  .pillrow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+  .pill{background:var(--slate-750);border:1px solid #1b2a44;border-radius:14px;padding:16px}
+  .pill .tag{font-size:11px;text-transform:uppercase;color:var(--slate-400)}
+  .pill .name{color:#fff;font-weight:800;margin-top:2px}
+  .pill .desc{color:var(--slate-300);font-size:14px;margin-top:6px}
+  /* --- Style for hyperlinked items --- */
+  .hyperlinked-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
   }
-  .dose-info {
-    text-align: center;
+  .hyperlinked-item:hover {
+    transform: scale(1.03);
+    cursor: pointer;
   }
-  .nav-links {
-    display: none;
-    /* Hide nav links on small screens if needed */
-  }
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .story-grid .btn {
-    padding: 10px;
-    font-size: 14px;
-  }
-  .story-subtitle {
-    font-size: 12px;
-    margin-top: 2px;
-  }
-}
-/* ===== Infographic Styles End ===== */
+  .muted{color:var(--slate-500);font-size:12px}
+  .footer{border-top:1px solid #1b2641;color:var(--slate-500);text-align:center;padding:32px 0;margin-top:48px}
 </style>
 </head>
 <body>
+
   <header class="header">
     <div class="container row">
       <h1>microDOS<span class="grad">(2)</span></h1>
       <nav class="nav-links">
-        <a href="https://microdos2.github.io/ARTICLES-AND-STUDIES/" class="btn">Articles & Studies</a>
-        <a href="#microdosing" class="btn">Dosage Guide</a>
+        <a href="https://microdos2.github.io/ARTICLES-AND-STUDIES/" class="btn" target="_blank">Articles and Studies</a>
         <a href="https://microdos2.github.io/UPDATE2/" class="btn">Home</a>
+        <a href="#dose" class="btn">Dosage Guide</a>
         <a href="#safety" class="btn">Safety Notes</a>
       </nav>
     </div>
   </header>
+
   <main>
     <!-- Hero -->
     <section class="section">
       <div class="container">
-        <h2 class="title">Microdosing Metocin <span class="grad">(4‑HO‑MET)</span></h2>
-        <p class="subtitle">A guide to sub-perceptual and gentle doses for enhanced clarity, creativity, and focus, without the full psychedelic experience.</p>
+        <h2 class="title">Metocin <span class="grad">(4‑HO‑MET)</span></h2>
+        <p class="subtitle">A precision psychedelic tryptamine first synthesized by Alexander “Sasha” Shulgin in the 1970s. Fast onset, predictable duration, and effects comparable to psilocin from magic mushrooms.</p>
       </div>
     </section>
-    <!-- Microdosing Guide -->
-    <section class="section" id="microdosing" style="padding-top:32px">
-      <div class="container">
+
+    <!-- What is Metocin -->
+    <section class="section" id="what" style="padding-top:32px">
+      <div class="container grid grid-3">
         <div class="card">
-          <h3 style="text-align:center;">Visual Dosing Guide</h3>
-          <p style="text-align:center; margin-bottom: 24px;">Each tablet is scored for easy and precise dosing. The guide below shows the equivalence for each portion.</p>
-          <!-- Infographic replaces the old <img> tag -->
-          <div class="guide-grid">
-            <!-- Full Dose -->
-            <div class="dose-card">
-              <div class="tablet-visual full">
-                <div class="tablet-part"></div>
-              </div>
-              <div class="dose-info">
-                <h3 class="dose-title">1 Tablet</h3>
-                <p class="dose-equivalent">~500mg Shrooms</p>
-                <p class="dose-description">A creative or recreational dose.</p>
-              </div>
-            </div>
-            <!-- Half Dose -->
-            <div class="dose-card">
-              <div class="tablet-visual half">
-                <div class="tablet-part"></div>
-                <div class="faded-part"></div>
-              </div>
-              <div class="dose-info">
-                <h3 class="dose-title">1/2 Tablet</h3>
-                <p class="dose-equivalent">~250mg Microdose</p>
-                <p class="dose-description">Standard microdose for creative lift.</p>
-              </div>
-            </div>
-            <!-- Quarter Dose -->
-            <div class="dose-card">
-              <div class="tablet-visual quarter">
-                <div class="tablet-part"></div>
-                <div class="faded-quarter"></div>
-                <div class="faded-half"></div>
-              </div>
-              <div class="dose-info">
-                <h3 class="dose-title">1/4 Tablet</h3>
-                <p class="dose-equivalent">~125mg Light Microdose</p>
-                <p class="dose-description">Sub-perceptual for focus and energy.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End of Infographic -->
-          <div class="grid grid-2" style="margin-top: 24px;">
-            <div class="kpi">
-              <div class="label">Standard Microdose</div>
-              <div class="value">1/2 Tablet</div>
-              <p style="color: var(--slate-300); font-size: 14px; margin-top: 8px;">Provides a noticeable creative and mood lift. Equivalent to ~250mg of dried mushrooms.</p>
-            </div>
-            <div class="kpi">
-              <div class="label">Light Microdose</div>
-              <div class="value">1/4 Tablet</div>
-              <p style="color: var(--slate-300); font-size: 14px; margin-top: 8px;">Offers a subtle, sub-perceptual boost in focus and energy. Equivalent to ~125mg of dried mushrooms.</p>
-            </div>
+          <h3>What is Metocin?</h3>
+          <ul>
+            <li><strong>Chemical:</strong> 4‑hydroxy‑N‑methyl‑N‑ethyltryptamine (4‑HO‑MET)</li>
+            <li><strong>Class:</strong> Psychedelic tryptamine</li>
+            <li><strong>Origin:</strong> First synthesized in the 1970s by Alexander “Sasha” Shulgin</li>
+            <li><strong>Relation:</strong> Produces effects comparable to psilocin from psilocybin mushrooms</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Core Specs</h3>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px">
+            <div class="kpi"><div class="label">Onset</div><div class="value">~15 min</div></div>
+            <div class="kpi"><div class="label">Peak</div><div class="value">1.5–2 hrs</div></div>
+            <div class="kpi"><div class="label">Duration</div><div class="value">≈4 hrs</div></div>
+            <div class="kpi"><div class="label">Form</div><div class="value">2 mg scored tab</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Adults Who Microdose Report CTA -->
-    <section class="section" style="padding-top: 32px; padding-bottom: 0; text-align: center;">
-      <a href="https://drive.google.com/file/d/1kiWditppClxE54T2SHQFF8p3NhSQcewj/view?usp=sharing" class="btn" style="padding: 12px 24px; font-size: 18px;">
-        "Adults who micro dose" Report
-      </a>
-    </section>
-
-    <!-- Potential Benefits -->
-    <section class="section" id="benefits" style="padding-top:32px">
+    <!-- What does it do? -->
+    <section class="section" id="does" style="padding-top:32px">
       <div class="container card">
-        <div class="benefits-header">
-          <h3>Potential Benefits of Microdosing</h3>
-          <a href="https://docs.google.com/document/d/1bcFpkotyifNp71QUVT3-xtZdb3rcMimgsSk8NCzBu18/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">
-            Microdosing Metocin Info
-          </a>
-        </div>
-        <p>While individual experiences vary, users often microdose to seek:</p>
-        <ul>
-          <li>Enhanced focus and concentration</li>
-          <li>Increased creativity and divergent thinking</li>
-          <li>Improved mood and a more positive outlook</li>
-          <li>Greater presence and sensory awareness</li>
-          <li>Reduced anxiety in social or professional settings</li>
-        </ul>
-        <div class="story-grid">
-          <a href="https://microdos2.github.io/Joes-Story/" class="btn">
-            <span>Joe's Story</span>
-            <span class="story-subtitle">The Day the Colors Came Back</span>
-          </a>
-          <a href="https://microdos2.github.io/Elanor-s-quiet-revolution/" class="btn">
-            <span>Elanor's Story</span>
-            <span class="story-subtitle">A Quiet Revolution</span>
-          </a>
-          <a href="https://microdos2.github.io/Jalen-s-Story/" class="btn">
-            <span>Jalen's Story</span>
-            <span class="story-subtitle">A Journey Back to Self</span>
-          </a>
-            <a href="https://microdos2.github.io/lenas-story/" class="btn">
-            <span>Lena's Story</span>
-            <span class="story-subtitle">Finding Flow in the Everyday</span>
-          </a>
-          <a href="https://microdos2.github.io/Banyus-Story/" class="btn">
-            <span>Banyu's Story</span>
-            <span class="story-subtitle">Blueprint for Clarity</span>
-          </a>
+        <h3>What does it do?</h3>
+        <p>Metocin engages serotonin receptors (notably 5‑HT<sub>2A</sub>) similar to psilocin, yielding psychedelic changes in perception, mood, and cognition. Users often report a clear, energetic headspace with vivid sensory enhancement.</p>
+        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;text-align:center">
+          <div class="kpi"><div class="label">Comparable to</div><div class="value">Psilocin</div></div>
+          <div class="kpi"><div class="label">Onset speed</div><div class="value">Fast (~15m)</div></div>
+          <div class="kpi"><div class="label">Total window</div><div class="value">~4 hours</div></div>
         </div>
       </div>
     </section>
+
+    <!-- Dosage (pure CSS infographics) -->
+    <section class="section" id="dose" style="padding-top:32px">
+      <div class="container">
+        <div class="card" style="margin-bottom:18px;text-align:center">
+          <h3 style="margin-bottom:6px">Dosage Guide</h3>
+          <p>Effects begin around <strong>1–2 mg</strong>. Each microDOS(2) tablet contains <strong>2 mg</strong> of Metocin (≈ the experience of <strong>½ gram</strong> of dried mushrooms). Start low and assess.</p>
+        </div>
+
+        <!-- Neon-style badges -->
+        <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;text-align:center;margin-bottom:12px">
+          <div>
+            <a href="https://microdos2.github.io/micromicrodosinfo/" class="hyperlinked-item">
+              <span class="badge b-green">LIGHT</span>
+              <div style="margin-top:8px">1 tab</div>
+            </a>
+          </div>
+          <div><span class="badge b-purple">MODERATE</span><div style="margin-top:8px">2 tabs</div></div>
+          <div><span class="badge b-blue">TRIPPY</span><div style="margin-top:8px">4 tabs</div></div>
+          <div><span class="badge b-pink">TRANSCEND</span><div style="margin-top:8px">6 tabs</div></div>
+        </div>
+
+        <!-- Gradient dose bar -->
+        <div class="dosebar"></div>
+
+        <!-- Detail cards -->
+        <div class="pillrow">
+          <a href="https://microdos2.github.io/micromicrodosinfo/" class="hyperlinked-item">
+            <div class="pill">
+              <div class="tag">1 tab • 2 mg</div>
+              <div class="name">Light</div>
+              <div class="desc">Social, playful, subtle lift.</div>
+            </div>
+          </a>
+          <div class="pill"><div class="tag">2 tabs • 4 mg</div><div class="name">Moderate</div><div class="desc">Noticeable effects, gentle visuals.</div></div>
+          <div class="pill"><div class="tag">4 tabs • 8 mg</div><div class="name">Trippy</div><div class="desc">Clear trip characteristics; strong perceptual changes.</div></div>
+          <div class="pill"><div class="tag">6+ tabs • 12 mg+</div><div class="name">Transcend</div><div class="desc">Deep, potentially transcendental experiences.</div></div>
+        </div>
+
+        <!-- Equivalence callout -->
+        <div class="card" style="margin-top:18px;text-align:center">
+          <strong>Equivalence:</strong> <span style="color:#fff">1 tablet ≈ the experience of 500 mg dried mushrooms</span>. Quarter‑ or half‑tab microdosing provides gentler effects.
+        </div>
+      </div>
+    </section>
+
+    <!-- Further Reading Section -->
+    <section class="section" id="reading" style="padding-top:32px; padding-bottom: 0;">
+        <div class="container card" style="text-align: center;">
+          <h3>Further Reading</h3>
+          <a href="https://docs.google.com/document/d/1UMQnulLEw2pxAjKASeyxIg5OmXUfd80-VKUZelIjYvs/edit?usp=sharing" class="btn" target="_blank">Microdosing: An Evidence-Based Review</a>
+          <a href="https://docs.google.com/document/d/1bcFpkotyifNp71QUVT3-xtZdb3rcMimgsSk8NCzBu18/edit?usp=sharing" class="btn" target="_blank">Microdosing Metocin</a>
+          <a href="https://drive.google.com/file/d/1kiWditppClxE54T2SHQFF8p3NhSQcewj/view?usp=sharing" class="btn" target="_blank">SCIENTIFIC REPORTS: Adults who microdose</a>
+        </div>
+    </section>
+
+    <!-- Feel -->
+    <section class="section" id="feel" style="padding-top:32px">
+      <div class="container card">
+        <h3>What does it feel like?</h3>
+        <div class="grid grid-3eq">
+          <div class="kpi"><span style="font-weight:800;color:#fff">Euphoria</span> and mood lift</div>
+          <div class="kpi">Tingling somatic sensations</div>
+          <div class="kpi">Perceptual enhancement (color, texture)</div>
+          <div class="kpi">Open/closed‑eye visuals</div>
+          <div class="kpi">Synesthesia (mixing of senses)</div>
+          <div class="kpi">Time dilation & cognitive shifts</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Safety -->
     <section class="section" id="safety" style="padding-top:32px">
       <div class="container card">
         <h3>Safety & Use Notes</h3>
         <ul>
-          <li><strong>Start Low:</strong> If you are new to Metocin, begin with a light microdose (1/4 tab) to assess your sensitivity.</li>
-          <li><strong>Legal:</strong> 4‑HO‑MET is not federally scheduled in the U.S.; always verify your local laws.</li>
-          <li><strong>Set & setting:</strong> While microdosing is sub-perceptual, be mindful of your environment. Avoid driving until you understand how it affects you.</li>
-          <li><strong>Plan your day:</strong> Effects are subtle but can last ~4 hours.</li>
-          <li><strong>Hydration:</strong> Drink water and avoid mixing with alcohol.</li>
-          <li><strong>Adults only:</strong> Intended for 21+. Consult a healthcare professional if you have medical conditions or take other medications.</li>
+          <li><strong>Legal:</strong> 4‑HO‑MET is not federally scheduled in the U.S.; verify local laws.</li>
+          <li><strong>Set & setting:</strong> Comfortable, safe environment; avoid driving or operating machinery.</li>
+          <li><strong>Plan your window:</strong> Allocate ~4 hours (onset ~15 min; peak 1.5–2 hrs).</li>
+          <li><strong>Hydration:</strong> Drink water; avoid alcohol mixing.</li>
+          <li><strong>Adults only:</strong> Intended for 21+; consult a healthcare professional if you have medical conditions or take medications.</li>
         </ul>
-        <p class="muted">This content is for informational purposes only and is not medical advice. These statements have not been evaluated by the FDA.</p>
+        <p class="muted">These statements have not been evaluated by the FDA. This content is informational and not medical advice.</p>
       </div>
     </section>
+    
     <!-- Order Now CTA -->
-    <section class="section" style="padding-top: 0; padding-bottom: 0; text-align: center;">
-      <a href="https://microdos2.github.io/UPDATE2/#pricing" class="btn" style="padding: 16px 32px; font-size: 20px;">Order Now</a>
+    <section class="section" style="padding-top: 32px; padding-bottom: 32px; text-align: center;">
+        <a href="https://microdos2.github.io/UPDATE2/#pricing" class="btn" style="padding: 16px 32px; font-size: 20px;">Order Now</a>
     </section>
+
   </main>
+
   <footer class="footer">© 2025 microDOS(2) — Precision Psychedelics, Simplified.</footer>
 </body>
 </html>
